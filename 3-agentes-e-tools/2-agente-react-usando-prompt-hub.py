@@ -44,7 +44,7 @@ agent_chain = create_react_agent(llm, tools, prompt, stop_sequence=False)
 agent_executor = AgentExecutor.from_agent_and_tools(
     agent=agent_chain, 
     tools=tools, 
-    verbose=True, 
+    verbose=False, 
     handle_parsing_errors="Invalid format. Either provide an Action with Action Input, or a Final Answer only.",
     max_iterations=3)
 
